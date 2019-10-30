@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.integer "clothing_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
 
   create_table "clothings", force: :cascade do |t|
     t.string "name"
+    t.string "brand"
     t.string "description"
     t.string "image_url"
     t.integer "user_id"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
+    t.string "email"
     t.string "password_digest"
     t.string "avatar"
     t.string "measurements"

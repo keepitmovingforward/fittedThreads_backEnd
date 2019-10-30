@@ -17,6 +17,7 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 gem "faker", "~> 1.9"
+gem 'pry'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
