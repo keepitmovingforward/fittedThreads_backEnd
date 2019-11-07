@@ -15,7 +15,7 @@ def User.digest(string)
 end
 
 #User data
-fittedThreads = User.find_or_create_by(name: "FittedThreads", username: "FittedThreads", email: "fittedthreads@gmail.com", password_digest: "#{User.digest("admin")}", avatar: "https://fontmeme.com/permalink/191107/2fa5e7f30931fe41a68644a96e198cad.png")
+fittedThreads = User.find_or_create_by(name: "FittedThreads", username: "FittedThreads", email: "fittedthreads@gmail.com", password_digest: "#{User.digest("admin")}", avatar: "https://fontmeme.com/permalink/191107/fd5f08ea70ae767e2e466900b2be0967.png")
 rob = User.find_or_create_by(name: "Rob", username: "robocop", email: "rob@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/301/people")
 jc = User.find_or_create_by(name: "JC", username: "jCheezy", email: "jc@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/302/people")
 cal = User.find_or_create_by(name: "Cal", username: "calZone", email: "cal@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/303/people")
