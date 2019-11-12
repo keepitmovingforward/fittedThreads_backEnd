@@ -18,6 +18,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def addMeasurement
+    byebug
+
+  end
+
 
 
 end

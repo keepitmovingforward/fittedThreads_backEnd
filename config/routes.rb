@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/clothes', to: 'clothings#index'
   post '/login', to: 'users#verify'
+  post '/addMeasurement', to: 'users#addMeasurement'
 
 
 end
