@@ -21,6 +21,21 @@ class UsersController < ApplicationController
   def addMeasurement
     byebug
 
+    if(params["measurementObj"]["size"])
+      # then this is a measurement based off existing size
+      # then create user_clothing obj with measurement and associated to
+      # user, clothing, and size id
+
+    else
+      # then this is a measurement based off a new size
+      # must create new size object
+      # then create user_clothing obj with measurements and associated to
+      # user, clothing, and size id
+    end
+
+
+
+
   end
 
 

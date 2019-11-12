@@ -9,6 +9,7 @@ class ClothingSerializer < ApplicationController
         :include => {
                     sizes: {except: [:created_at, :updated_at]},
                     user_clothings: {except: [:created_at, :updated_at]},
+                    user_measurements: {except: [:created_at, :updated_at, :password_digest, :name]},
                     categories: {except: [:created_at, :updated_at]},
                     user: {except: [:created_at, :updated_at, :password_digest, :measurements, :name]}
                   },
