@@ -34,11 +34,12 @@ class UsersController < ApplicationController
       UserClothing.create(user: user, clothing: clothing, size: size, **sym_meas)
       clothes = Clothing.all
       render json: ClothingSerializer.new(clothes).to_serialized_json
-      # then this is a measurement based off existing size
-      # then create user_clothing obj with measurement and associated to
-      # user, clothing, and size id
-
     else
+      new_size_name = params["measurementObj"]["custom_size"]
+      size = Size.create(size: new_size_name, clothing: clothing)
+      UserClothing.create(user: user, clothing: clothing, size: size, **sym_meas)
+      clothes = Clothing.all
+      render json: ClothingSerializer.new(clothes).to_serialized_json
       # then this is a measurement based off a new size
       # must create new size object
       # then create user_clothing obj with measurements and associated to
