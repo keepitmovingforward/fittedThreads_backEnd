@@ -19,9 +19,18 @@ class UsersController < ApplicationController
   end
 
   def addMeasurement
+
+    clothing_id = params["measurementObj"]["clothing_id"]
+    user_id = params["measurementObj"]["user_id"]
+    if(params["measurementObj"]["size"])
+      existing_size = true
+      size_id = params["measurementObj"]["size"] 
+    end
+
     byebug
 
-    if(params["measurementObj"]["size"])
+    if (existing_size)
+
       # then this is a measurement based off existing size
       # then create user_clothing obj with measurement and associated to
       # user, clothing, and size id
