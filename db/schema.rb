@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
     t.integer "topChest"
     t.integer "topWaist"
     t.integer "topSleeve"
-    t.integer "topFrontLength"
+    t.integer "topFront_Length"
     t.integer "bottomWaist"
     t.integer "bottomLength"
     t.integer "bottomHip"
     t.integer "bottomThigh"
-    t.integer "bottomBottomHem"
+    t.integer "bottomBottom_Hem"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -73,12 +73,12 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
     t.integer "topChest"
     t.integer "topWaist"
     t.integer "topSleeve"
-    t.integer "topFrontLength"
+    t.integer "topFront_Length"
     t.integer "bottomWaist"
     t.integer "bottomLength"
     t.integer "bottomHip"
     t.integer "bottomThigh"
-    t.integer "bottomBottomHem"
+    t.integer "bottomBottom_Hem"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

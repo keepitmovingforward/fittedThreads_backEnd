@@ -8,12 +8,12 @@ class CreateUserClothings < ActiveRecord::Migration[6.0]
       t.integer :topChest
       t.integer :topWaist
       t.integer :topSleeve
-      t.integer :topFrontLength
+      t.integer :topFront_Length
       t.integer :bottomWaist
       t.integer :bottomLength
       t.integer :bottomHip
       t.integer :bottomThigh
-      t.integer :bottomBottomHem
+      t.integer :bottomBottom_Hem
 
       t.timestamps
     end
