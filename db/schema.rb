@@ -48,8 +48,17 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
   create_table "user_clothings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "clothing_id"
-    t.string "measurements"
     t.integer "size_id"
+    t.integer "topNeck"
+    t.integer "topChest"
+    t.integer "topWaist"
+    t.integer "topSleeve"
+    t.integer "topFrontLength"
+    t.integer "bottomWaist"
+    t.integer "bottomLength"
+    t.integer "bottomHip"
+    t.integer "bottomThigh"
+    t.integer "bottomBottomHem"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,7 +69,16 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
     t.string "email"
     t.string "password_digest"
     t.string "avatar"
-    t.string "measurements"
+    t.integer "topNeck"
+    t.integer "topChest"
+    t.integer "topWaist"
+    t.integer "topSleeve"
+    t.integer "topFrontLength"
+    t.integer "bottomWaist"
+    t.integer "bottomLength"
+    t.integer "bottomHip"
+    t.integer "bottomThigh"
+    t.integer "bottomBottomHem"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
