@@ -4,16 +4,16 @@ class CreateUserClothings < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :clothing_id
       t.integer :size_id
-      t.integer :topNeck
-      t.integer :topChest
-      t.integer :topWaist
-      t.integer :topSleeve
-      t.integer :topFront_Length
-      t.integer :bottomWaist
-      t.integer :bottomLength
-      t.integer :bottomHip
-      t.integer :bottomThigh
-      t.integer :bottomBottom_Hem
+      t.float :topNeck
+      t.float :topChest
+      t.float :topWaist
+      t.float :topSleeve
+      t.float :topFront_Length
+      t.float :bottomWaist
+      t.float :bottomLength
+      t.float :bottomHip
+      t.float :bottomThigh
+      t.float :bottomBottom_Hem
 
       t.timestamps
     end

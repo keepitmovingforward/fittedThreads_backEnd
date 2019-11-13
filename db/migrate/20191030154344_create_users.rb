@@ -6,16 +6,16 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :password_digest
       t.string :avatar
-      t.integer :topNeck
-      t.integer :topChest
-      t.integer :topWaist
-      t.integer :topSleeve
-      t.integer :topFront_Length
-      t.integer :bottomWaist
-      t.integer :bottomLength
-      t.integer :bottomHip
-      t.integer :bottomThigh
-      t.integer :bottomBottom_Hem
+      t.float :topNeck
+      t.float :topChest
+      t.float :topWaist
+      t.float :topSleeve
+      t.float :topFront_Length
+      t.float :bottomWaist
+      t.float :bottomLength
+      t.float :bottomHip
+      t.float :bottomThigh
+      t.float :bottomBottom_Hem
 
       t.timestamps
     end
