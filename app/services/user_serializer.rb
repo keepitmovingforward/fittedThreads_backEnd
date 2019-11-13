@@ -8,7 +8,7 @@ class UserSerializer < ApplicationController
       @user.to_json(
         {
         :include => {clothings: {except: [:created_at, :updated_at]},
-                    measured_clothings: {except: [:created_at, :updated_at]}
+                    measured_clothings: {except: [:created_at, :updated_at]},
                   },
         :except => [:created_at, :updated_at]
       }
