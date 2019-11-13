@@ -50,6 +50,7 @@ slim_dresspants36 = Size.create(size: "36", clothing: slim_dress_pants)
 
 #user_clothings
 denim_measurement1 = UserClothing.find_or_create_by(user: rob, clothing: denim_jacket, size: small_for_denim, topNeck: 14, topChest: 15, topWaist: 16)
+denim_measurement5 = UserClothing.find_or_create_by(user: sang, clothing: denim_jacket, size: small_for_denim, topNeck: 14, topChest: 14, topWaist: 15)
 denim_measurement2 = UserClothing.find_or_create_by(user: rob, clothing: denim_jacket, size: med_for_denim, topNeck: 15, topChest: 16, topSleeve: 16)
 denim_measurement3 = UserClothing.find_or_create_by(user: rob, clothing: denim_jacket, size: large_for_denim, topNeck: 16, topChest: 17, topFrontLength: 18)
 denim_measurement4 = UserClothing.find_or_create_by(user: rob, clothing: denim_jacket, size: xlarge_for_denim, topNeck: 17, topChest: 18, topFrontLength: 18, topWaist: 38, topSleeve: 30)
