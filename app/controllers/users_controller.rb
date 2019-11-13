@@ -20,17 +20,20 @@ class UsersController < ApplicationController
 
   def addMeasurement
 
-    clothing_id = params["measurementObj"]["clothing_id"]
-    user_id = params["measurementObj"]["user_id"]
+    clothing = Clothing.find(params["measurementObj"]["clothing_id"])
+    user = User.find(params["measurementObj"]["user_id"])
     if(params["measurementObj"]["size"])
       existing_size = true
-      size_id = params["measurementObj"]["size"] 
+      size = Size.find(params["measurementObj"]["size"])
     end
 
-    byebug
+    measurements = params["measurementObj"]["measurements"].each{|k,v| [k, v] }
+    sym_meas = measurements.to_a.map{|e| [e[0].to_sym, e[1]]}.to_h
 
     if (existing_size)
-
+      UserClothing.create(user: user, clothing: clothing, size: size, **sym_meas)
+      clothes = Clothing.all
+      render json: ClothingSerializer.new(clothes).to_serialized_json
       # then this is a measurement based off existing size
       # then create user_clothing obj with measurement and associated to
       # user, clothing, and size id
