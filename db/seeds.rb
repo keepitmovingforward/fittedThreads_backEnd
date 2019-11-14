@@ -20,6 +20,8 @@ rob = User.find_or_create_by(name: "Rob", username: "robocop", email: "rob@gmail
 jc = User.find_or_create_by(name: "JC", username: "jCheezy", email: "jc@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/302/animals")
 cal = User.find_or_create_by(name: "Cal", username: "calZone", email: "cal@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/303/animals")
 sang = User.find_or_create_by(name: "Sang", username: "sangryBird", email: "sang@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/304/animals")
+victory = User.find_or_create_by(name: "Victor", username: "victory", email: "victory@gmail.com", password_digest: "#{User.digest("1234")}", avatar: "http://placeimg.com/300/299/animals")
+
 
 #Clothing data
 denim_jacket = Clothing.find_or_create_by(name: "Faded Denim Jacket", brand: "Levi's", description: "Stonewashed broken in Denim Jacket for the casual Sunday chill", image_url: "https://images.unsplash.com/photo-1523205565295-f8e91625443b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80", user: fittedThreads)
@@ -33,6 +35,8 @@ torn_black_jeans = Clothing.find_or_create_by(name: "Black Torn Jeans", brand: "
 fitted_khaki_jeans = Clothing.find_or_create_by(name: "Khaki Slim Fit Jeans", brand: "Eddie Bauer", description: "With just-right room in the thighs and a classic mid rise, these slim straight-leg jeans won't constrict or compromise your modern style.", image_url: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", user: sang)
 straight_blue_jeans = Clothing.find_or_create_by(name: "Straight Leg Jeans", brand: "7 For All Mankind", description: "A pristine indigo wash brings a blank canvas to straight-leg jeans cut from stretch denim with a look that will age with you on your terms.", image_url: "https://images.unsplash.com/photo-1460639763825-d45267e63cd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", user: fittedThreads)
 slim_dress_pants = Clothing.find_or_create_by(name: "Stretch Weekday Warrior Slim Fit Dress Pants", brand: "Bonobos", description: "A sharp look for any day of the week, these flat-front pants are made from soft, easy-care stretch cotton and cut for a trim (but not tight) fit.", image_url: "https://n.nordstrommedia.com/id/sr3/bc7a5dee-f018-4d0e-8acf-4b1fa53339bd.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1660&h=2546", user: rob)
+camel_trench = Clothing.find_or_create_by(name: "Camel Wool Trench Coat", brand: "Kenneth Cole", description: "Kenneth Cole's new wool-blend coat is perfect for the workday and an elevated look for the weekend.", image_url: "https://images.pexels.com/photos/3206119/pexels-photo-3206119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", user: victory)
+blue_chino = Clothing.find_or_create_by(name: "Slim-fit Flex Chino", brand: "J. Crew", description: "Chinos flex slim-fitted for that professional look with zero compromises on comfort.", image_url: "https://www.jcrew.com/s7-img-facade/H3167_BL7361_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=2000&hei=2000", user: jc)
 
 #size
 small_for_denim = Size.create(size: "Small", clothing: denim_jacket)
@@ -80,3 +84,5 @@ category_assign7 = ClothingCategory.create(category: jeans, clothing: torn_black
 category_assign8 = ClothingCategory.create(category: jeans, clothing: fitted_khaki_jeans)
 category_assign9 = ClothingCategory.create(category: jeans, clothing: straight_blue_jeans)
 category_assign10 = ClothingCategory.create(category: pants, clothing: slim_dress_pants)
+category_assign11 = ClothingCategory.create(category: jacket, clothing: camel_trench)
+category_assign12 = ClothingCategory.create(category: pants, clothing: blue_chino)
