@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_155725) do
     t.float "bottomHip"
     t.float "bottomThigh"
     t.float "bottomBottom_Hem"
+    t.boolean "firstTimeUser", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/clothes', to: 'clothings#index'
   post '/login', to: 'users#verify'
   post '/addMeasurement', to: 'users#addMeasurement'
+  patch '/firstTimeUser', to: 'users#firstTimeUserValidation'
 
 
 end

@@ -46,9 +46,11 @@ class UsersController < ApplicationController
       # user, clothing, and size id
     end
 
+  end
 
-
-
+  def firstTimeUserValidation
+    user = User.find(params["userId"])
+    render json: UserSerializer.new(user.update(firstTimeUser: false)).to_serialized_json
   end
 
 

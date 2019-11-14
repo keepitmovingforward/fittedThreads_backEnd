@@ -16,6 +16,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.float :bottomHip
       t.float :bottomThigh
       t.float :bottomBottom_Hem
+      t.boolean :firstTimeUser, default: true
 
       t.timestamps
     end
