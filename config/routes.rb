@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/login', to: 'users#verify'
   post '/addMeasurement', to: 'users#addMeasurement'
   patch '/firstTimeUser', to: 'users#firstTimeUserValidation'
+  patch '/updateMyMeasurements', to: 'users#updateMyMeasurements'
 
 
 end

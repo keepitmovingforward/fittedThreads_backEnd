@@ -59,6 +59,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def updateMyMeasurements
+    updated_ms = params["measurements"].each{|k,v| [k, v] }
+    sym_meas = updated_ms.to_a.map{|e| [e[0].to_sym, e[1]]}.to_h
+    user = User.find(params["user_id"])
+    user.update(**sym_meas)
+
+    render json: UserSerializer.new(user).to_serialized_json
+  end
+
 
 
 end
